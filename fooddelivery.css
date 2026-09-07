@@ -1,0 +1,353 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #f7f4ef;
+    color: #2d2d2d;
+}
+header {
+    background: #263238;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ffcc70;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #ffcc70;
+}
+.cart-btn {
+    background: #ffcc70;
+    color: #263238;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.home {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 10%;
+    background: #e8dfd3;
+}
+.home-content {
+    width: 45%;
+}
+.tagline {
+    color: #b86b2b;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.home h1 {
+    font-size: 48px;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+.home-text {
+    color: #555;
+    line-height: 1.7;
+}
+.home button,
+.customer-box button,
+.payment-box button {
+    background: #b86b2b;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.home button:hover,
+.customer-box button:hover,
+.payment-box button:hover {
+    background: #8d4e1d;
+}
+.home-image img {
+    width: 430px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.search-section {
+    text-align: center;
+    padding: 45px 20px;
+}
+.search-section h2 {
+    margin-bottom: 20px;
+}
+.search-section input {
+    width: 60%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.section-title p {
+    color: #b86b2b;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+.section-title h2 {
+    font-size: 32px;
+}
+.foods {
+    padding: 60px 8%;
+}
+.food-container {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.food-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.food-card:hover {
+    transform: translateY(-8px);
+}
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.food-info {
+    padding: 20px;
+}
+.food-info h3 {
+    margin-bottom: 10px;
+}
+.food-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+}
+.food-bottom span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #b86b2b;
+}
+.food-bottom button {
+    background: #263238;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.cart-section {
+    background: #e8dfd3;
+    padding: 60px 10%;
+}
+.cart-box {
+    background: white;
+    max-width: 900px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item p {
+    color: #777;
+    margin-top: 5px;
+}
+.quantity button {
+    background: #b86b2b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.remove-btn {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+.total-box {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #b86b2b;
+}
+.customer-section {
+    padding: 60px 10%;
+}
+.customer-box {
+    max-width: 550px;
+    background: white;
+    margin: auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+.customer-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+.customer-box input,
+.customer-box textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.customer-box textarea {
+    height: 100px;
+    resize: none;
+}
+#savedMessage {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+.summary-section {
+    background: #263238;
+    color: white;
+    padding: 60px 10%;
+}
+.summary-box {
+    background: white;
+    color: #333;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.summary-box h3 {
+    text-align: right;
+    margin-top: 20px;
+    color: #b86b2b;
+}
+.payment-section {
+    background: #ffcc70;
+    padding: 60px 20px;
+    text-align: center;
+}
+.payment-content > p {
+    margin: 10px;
+}
+.payment-content h2 {
+    font-size: 35px;
+}
+.payment-box {
+    background: white;
+    width: 350px;
+    max-width: 95%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.payment-box img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+footer {
+    background: #181c1e;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    line-height: 1.8;
+}
+footer h2 {
+    color: #ffcc70;
+}
+.copyright {
+    margin-top: 15px;
+    color: #aaa;
+}
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-content {
+        width: 100%;
+    }
+    .home-image img {
+        width: 100%;
+        height: 250px;
+        margin-top: 30px;
+    }
+    .search-section input {
+        width: 90%;
+    }
+    .cart-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
