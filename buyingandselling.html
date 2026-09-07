@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle-Cart - Buy and Sell Used Products</title>
+    <link rel="stylesheet" href="buyingandselling.css">
+</head>
+<body>
+    <header>
+        <h1>CYCLE-CART</h1>
+        <p>Buy Smart • Sell Easy • Reuse More</p>
+    </header>
+    <div class="search">
+        <input type="text" id="search"
+            placeholder="Search for products..."
+            onkeyup="searchProduct()">
+    </div>
+    <section class="products-section">
+        <h2>Available Used Products</h2>
+        <div id="productList">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
+                    alt="Used Laptop">
+                <h3>Used Laptop</h3>
+                <p class="description">
+                    Dell laptop in excellent working condition.
+                </p>
+                <p class="price">₹20,000</p>
+                <p><b>Condition:</b> Excellent</p>
+                <p><b>Location:</b> Chennai</p>
+                <button onclick="buyProduct('Used Laptop')">
+                    Buy Now
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+                    alt="Used Mobile">
+                <h3>Used Mobile</h3>
+                <p class="description">
+                    Smartphone with good battery backup.
+                </p>
+                <p class="price">₹10,000</p>
+                <p><b>Condition:</b> Good</p>
+                <p><b>Location:</b> Tambaram</p>
+                <button onclick="buyProduct('Used Mobile')">
+                    Buy Now
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80"
+                    alt="Used Bicycle">
+                <h3>Used Bicycle</h3>
+                <p class="description">
+                    Well maintained bicycle suitable for daily use.
+                </p>
+                <p class="price">₹5,000</p>
+                <p><b>Condition:</b> Good</p>
+                <p><b>Location:</b> Erode</p>
+                <button onclick="buyProduct('Used Bicycle')">
+                    Buy Now
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+                    alt="Office Chair">
+                <h3>Office Chair</h3>
+                <p class="description">
+                    Comfortable office chair in good condition.
+                </p>
+                <p class="price">₹3,500</p>
+                <p><b>Condition:</b> Very Good</p>
+                <p><b>Location:</b> Coimbatore</p>
+                <button onclick="buyProduct('Office Chair')">
+                    Buy Now
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+                    alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="description">
+                    Smart watch with useful fitness tracking features.
+                </p>
+                <p class="price">₹2,500</p>
+                <p><b>Condition:</b> Excellent</p>
+                <p><b>Location:</b> Chennai</p>
+                <button onclick="buyProduct('Smart Watch')">
+                    Buy Now
+                </button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80"
+                    alt="Digital Camera">
+                <h3>Digital Camera</h3>
+                <p class="description">
+                    Digital camera suitable for photography beginners.
+                </p>
+                <p class="price">₹8,000</p>
+                <p><b>Condition:</b> Good</p>
+                <p><b>Location:</b> Madurai</p>
+                <button onclick="buyProduct('Digital Camera')">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="sell">
+        <h2>Sell Your Product</h2>
+        <input type="text" id="name"
+            placeholder="Enter Product Name">
+        <input type="number" id="price"
+            placeholder="Enter Product Price">
+        <textarea id="description"
+            placeholder="Enter Product Description"></textarea>
+        <input type="text" id="condition"
+            placeholder="Enter Product Condition">
+        <input type="text" id="location"
+            placeholder="Enter Your Location">
+        <input type="text" id="image"
+            placeholder="Enter Product Image URL">
+        <button onclick="addProduct()">
+            Add Product
+        </button>
+    </section>
+    <footer>
+        <h3>CYCLE-CART</h3>
+        <p>Give your old products a second life!</p>
+        <p>© 2026 Reuse Mart | All Rights Reserved</p>
+    </footer>
+    <script src="buyingandselling.js"></script>
+</body>
+</html>
