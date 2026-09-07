@@ -1,0 +1,266 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+body{
+background:#f5f8fa;
+}
+.container{
+display:flex;
+min-height:100vh;
+}
+.sidebar{
+width:250px;
+background:#000;
+color:white;
+padding:20px;
+position:fixed;
+height:100%;
+}
+.logo{
+font-size:45px;
+margin-bottom:30px;
+text-align:center;
+}
+.sidebar ul{
+list-style:none;
+}
+.sidebar li{
+padding:18px;
+margin:8px 0;
+border-radius:40px;
+cursor:pointer;
+font-size:20px;
+transition:.3s;
+}
+.sidebar li i{
+width:35px;
+}
+.sidebar li:hover{
+background:#1d9bf0;
+}
+.tweetBtn{
+margin-top:30px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:30px;
+background:#1d9bf0;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+.tweetBtn:hover{
+background:#0f8ae6;
+}
+.main{
+margin-left:250px;
+width:calc(100% - 550px);
+padding:25px;
+}
+.page{
+display:none;
+}
+.page.active{
+display:block;
+}
+h2{
+margin-bottom:20px;
+}
+.tweetBox{
+display:flex;
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+}
+.tweetBox img{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+}
+.tweetInput{
+width:100%;
+margin-left:15px;
+}
+textarea{
+width:100%;
+height:90px;
+resize:none;
+border:none;
+outline:none;
+font-size:18px;
+}
+.tweetInput button{
+float:right;
+margin-top:10px;
+padding:10px 25px;
+border:none;
+border-radius:25px;
+background:#1d9bf0;
+color:white;
+cursor:pointer;
+}
+.tweet{
+display:flex;
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+}
+.tweet img{
+width:50px;
+height:50px;
+border-radius:50%;
+object-fit:cover;
+}
+.tweetContent{
+margin-left:15px;
+width:100%;
+}
+.tweetContent h3{
+margin-bottom:8px;
+}
+.tweetContent p{
+margin-bottom:12px;
+line-height:1.5;
+}
+.actions{
+display:flex;
+justify-content:space-between;
+color:gray;
+}
+.actions span{
+cursor:pointer;
+}
+.card{
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:12px;
+}
+.notify{
+background:white;
+padding:18px;
+border-radius:12px;
+margin-bottom:15px;
+}
+.chatBox{
+background:white;
+padding:20px;
+border-radius:12px;
+height:400px;
+overflow-y:auto;
+}
+.chat{
+background:#ececec;
+padding:12px;
+border-radius:15px;
+margin-bottom:12px;
+width:70%;
+}
+.chat.me{
+background:#1d9bf0;
+color:white;
+margin-left:auto;
+}
+.messageInput{
+display:flex;
+margin-top:20px;
+}
+.messageInput input{
+flex:1;
+padding:15px;
+border:1px solid #ddd;
+border-radius:25px;
+outline:none;
+}
+.messageInput button{
+margin-left:10px;
+padding:15px 25px;
+border:none;
+border-radius:25px;
+background:#1d9bf0;
+color:white;
+cursor:pointer;
+}
+.profile{
+background:white;
+border-radius:15px;
+padding:30px;
+text-align:center;
+}
+.profile img{
+width:150px;
+height:150px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+}
+.stats{
+display:flex;
+justify-content:space-around;
+margin-top:35px;
+}
+.right{
+width:300px;
+background:white;
+padding:20px;
+position:fixed;
+right:0;
+height:100%;
+}
+.follow{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:20px;
+}
+.follow img{
+width:45px;
+height:45px;
+border-radius:50%;
+object-fit:cover;
+}
+.follow div{
+flex:1;
+margin-left:12px;
+}
+.follow button{
+float:right;
+padding:8px 18px;
+border:none;
+border-radius:20px;
+background:#000;
+color:white;
+cursor:pointer;
+}
+@media(max-width:1000px){
+.right{
+display:none;
+}
+.main{
+width:calc(100% - 250px);
+}
+}
+@media(max-width:700px){
+.sidebar{
+width:70px;
+}
+.sidebar li{
+font-size:0;
+}
+.sidebar li i{
+font-size:22px;
+}
+.tweetBtn{
+display:none;
+}
+.main{
+margin-left:70px;
+width:calc(100% - 70px);
+}
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="twitter.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h1 class="logo">𝕏</h1>
+        <ul>
+            <li onclick="showSection('home')">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </li>
+            <li onclick="showSection('explore')">
+                <i class="fa-solid fa-hashtag"></i>
+                Explore
+            </li>
+            <li onclick="showSection('notifications')">
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </li>
+            <li onclick="showSection('messages')">
+                <i class="fa-solid fa-envelope"></i>
+                Messages
+            </li>
+            <li onclick="showSection('profile')">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </li>
+        </ul>
+        <button class="tweetBtn">
+            Tweet
+        </button>
+    </div>
+    <div class="main">
+        <section id="home" class="page active">
+            <h2>Home</h2>
+            <div class="tweetBox">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFeioPLnEOiRJqeXk9mWZsfINuCow3ipsvFW3GBggpA&s=10">
+                <div class="tweetInput">
+                    <textarea
+                    id="tweetInput"
+                    placeholder="What's happening?"></textarea>
+                    <button onclick="postTweet()">
+                        Tweet
+                    </button>
+                </div>
+            </div>
+            <div id="tweetContainer">
+                <div class="tweet">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ68M10GEWe3H3zyecnnSXmnpsYL6pdTcJAiRG3uCVbIw&s=10">
+                    <div class="tweetContent">
+                        <h3>Twitter</h3>
+                        <p>
+                            Welcome to the Twitter Clone!!
+                        </p>
+                        <div class="actions">
+                            <span onclick="like(this)">
+                                ❤️ 0
+                            </span>
+                            <span onclick="comment()">
+                                💬 Comment
+                            </span>
+                            <span onclick="repost()">
+                                🔁 Repost
+                            </span>
+                            <span onclick="bookmark()">
+                                🔖 Save
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore" class="page">
+            <h2>Trendings</h2>
+            <div class="card">
+                <h3>#HTML</h3>
+                <p>128K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#CSS</h3>
+                <p>95K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#NEWS</h3>
+                <p>87K Posts</p>
+            </div>
+            <div class="card">
+                <h3>#INDIA</h3>
+                <p>65K Posts</p>
+            </div>
+        </section>
+        <section id="notifications" class="page">
+            <h2>Notifications</h2>
+            <div class="notify">
+                ❤️ Pragathi liked your Tweet
+            </div>
+            <div class="notify">
+                👤 Jenifer followed you
+            </div>
+            <div class="notify">
+                💬 Poovisha commented on your Tweet
+            </div>
+            <div class="notify">
+                🔁 Nakshatra reposted your Tweet
+            </div>
+        </section>
+        <section id="messages" class="page">
+            <h2>Messages</h2>
+            <div class="chatBox">
+                <div class="chat">
+                    <strong>Jenifer</strong>
+                    <p>Hello 👋</p>
+                </div>
+                <div class="chat me">
+                    <strong>You</strong>
+                    <p>Hi 😊</p>
+                </div>
+                <div class="chat">
+                    <strong>Jenifer</strong>
+                    <p>Nice Twitter Clone!</p>
+                </div>
+            </div>
+            <div class="messageInput">
+                <input
+                id="message"
+                placeholder="Type a message">
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+            </div>
+        </section>
+        <section id="profile" class="page">
+            <div class="profile">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFeioPLnEOiRJqeXk9mWZsfINuCow3ipsvFW3GBggpA&s=10">
+                <h2>NANTHITHA S</h2>
+                <p>@nanthitha</p>
+                <p>
+                    Student • VCET
+                </p>
+                <div class="stats">
+                    <div>
+                        <h2>25</h2>
+                        <p>Posts</p>
+                    </div>
+                    <div>
+                        <h2>150</h2>
+                        <p>Followers</p>
+                    </div>
+                    <div>
+                        <h2>73</h2>
+                        <p>Following</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="right">
+        <h3>Who to Follow</h3>
+        <div class="follow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTizn-S8VXktDNvG1yXhM3VNfW2KIdBUxZnX5901gmiEQ&s=10">
+            <div>
+                <strong>Nakshatra</strong>
+                <button>Follow</button>
+            </div>
+        </div>
+        <div class="follow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYDC7lr7Xgx6F_29n6cdbJuT-Gq3Ei8kCVmuSgWE-CjQ&s=10">
+            <div>
+                <strong>Suchithra</strong>
+                <button>Follow</button>
+            </div>
+        </div>
+        <div class="follow">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvOsNhz6Y5i9SQ91PcJJ0Sx4r36KQztP9mtqc0281Pfw&s=10">
+            <div>
+                <strong>Megavarshini</strong>
+                <button>Follow</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="twitter.js"></script>
+</body>
+</html>
